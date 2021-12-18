@@ -1,0 +1,16 @@
+{
+   "monitorFromUrlFile": false,
+   "url": "only put an url in here is monitorFromUrlFile is set to true and you want this status page to clone another status pages data",
+   "port": 1319,
+   "fetchInterval": 10000,
+   "token": "123456",
+   "servers": [
+       {
+           "name": "Your nodes name",
+           "url": "Your statusmonitor backend url",
+           "password": "",
+           "type": "VM",
+           "location": "CA"
+       }
+   ]
+}
