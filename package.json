@@ -1,7 +1,7 @@
 {
   "name": "statusmonitor-server",
   "decription": "A free status monitor solution, used to monitor a machine's resources usage.",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "scripts": {
       "start": "node index.js"
   },
@@ -15,11 +15,11 @@
       "url": "https://github.com/DottoXD/statusmonitor-server/isssues"
   },
   "dependencies": {
-      "fastify": "^3.24.1",
+      "fastify": "^3.27.0",
       "fastify-formbody": "^5.2.0",
       "fastify-static": "^4.5.0",
       "glob": "^7.2.0",
       "moment": "^2.29.1",
-      "node-fetch": "^2.6.6"
+      "node-fetch": "^2.6.7"
   }
 }
