@@ -4,6 +4,8 @@
    "port": 3000,
    "fetchInterval": 10000,
    "token": "123456",
+   "grafanaSupport": true,
+   "version": "0.0.5",
    "servers": [
        {
            "name": "Your nodes name",
