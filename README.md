@@ -5,8 +5,8 @@ You can selfhost a [statusmonitor-client](https://github.com/DottoXD/statusmonit
 # important note (credits)
 The frontend UI included in this is a slightly modified version of [serverstatus-web](https://github.com/krwu/ServerStatus-web) by krwu. Credits to him for making it.
 
-# update 0.0.1
-+ first release
+# update 0.0.5
++ network usage per second, grafana (prometheus) support
 
 # features
 This project can currently clone another status page's data or just display your own, that you can fetch with [statusmonitor-client](https://github.com/DottoXD/statusmonitor-client)
