@@ -1,16 +1,26 @@
 {
-   "monitorFromUrlFile": false,
-   "url": "only put an url in here is monitorFromUrlFile is set to true and you want this status page to clone another status pages data",
-   "port": 3000,
-   "fetchInterval": 10000,
-   "token": "123456",
-   "grafanaSupport": true,
-   "version": "0.0.5",
+   "serverSettings": {
+       "port": 3000,
+       "fetchInterval": 5000,
+       "grafanaSupport": true,
+       "version": "0.0.6",
+       "monitorFromUrlFile": false,
+       "url": "only put an url in here is monitorFromUrlFile is set to true and you want this status page to clone another status pages data"
+   },
+   "notificationSettings": {
+       "enabled": true,
+       "discordWebhookURL": "Your Discord webhook for status notifications!",
+       "embedName": "StatusMonitor | ",
+       "onlineColorCode": 65443,
+       "offlineColorCode": 16711680,
+       "offlineDescription": "The mentioned service is now offline! We are working on soliving this issue!",
+       "onlineDescription": "The mentioned service is now back online, sweet!"
+   },
    "servers": [
        {
-           "name": "Your nodes name",
-           "url": "Your statusmonitor backend url",
-           "password": "Your statusmonitor backend password",
+           "name": "My Server",
+           "url": "http://localhost:3001",
+           "password": "",
            "type": "VM",
            "location": "CA"
        }
