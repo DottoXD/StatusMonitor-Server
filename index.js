@@ -11,7 +11,6 @@ let notificationArray = [];
 
 glob.path = __dirname;
 
-fastify.register(require("fastify-formbody"));
 fastify.register(require("fastify-static"), {
   root: path.join(__dirname, "build"),
 });
