@@ -1,0 +1,15 @@
+{
+  "NAME": "İsim",
+  "TYPE": "Tip",
+  "LOC": "Ülke",
+  "UPTIME": "Çalışma Süresi",
+  "LOAD": "Yük",
+  "NETWORK": "Ağ",
+  "CPU": "CPU Kullanımı",
+  "RAM": "RAM Kullanımı",
+  "HDD": "HDD Kullanımı",
+  "LOADING": "Veri Yükleniyor...",
+  "WAIT": "Sunucudan Veri çekiliyor lütfen bekleyiniz...",
+  "LAST_UPDATE": "Son Güncelleme: {updatedTime}",
+  "DAYS": "Gün"
+}
