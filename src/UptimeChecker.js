@@ -40,8 +40,9 @@ StatusMonitor.process(async function (job, done) {
 				if (!Json) {
 					let RedisData = await RedisClient.get(service.Name);
 					let Parse = await JSON.parse(RedisData);
-					if (Parse.Online === true)
-						DeliverStatus(service.Name, "Offline");
+					if(Parse) {
+						if (Parse.Online === true) DeliverStatus(service.Name, "Offline");
+					}
 					return RedisClient.set(service.Name, OfflineObject);
 				}
 				let OnlineObject = JSON.stringify({
@@ -64,14 +65,18 @@ StatusMonitor.process(async function (job, done) {
 				});
 				let RedisData = await RedisClient.get(service.Name);
 				let Parse = await JSON.parse(RedisData);
-				if (Parse.Online === false) DeliverStatus(service.Name, "Online");
+				if(Parse) {
+					if (Parse.Online === false) DeliverStatus(service.Name, "Online");
+				}
 				return RedisClient.set(service.Name, OnlineObject);
 			})
 			.catch((error) => {
 				RedisClient.get(service.Name).then(async (data) => {
 					let Parse = await JSON.parse(data);
-					if (Parse.Online === true)
+					if(Parse) {
+						if (Parse.Online === true)
 						DeliverStatus(service.Name, "Offline");
+					}
 					return RedisClient.set(service.Name, OfflineObject);
 				});
 			});
