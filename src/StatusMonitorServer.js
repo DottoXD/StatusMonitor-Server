@@ -86,12 +86,12 @@ class StatusMonitorServer {
 	}
 
 	static UpdateChecker() {
-		let Data = undici.fetch(
+		undici
+			.fetch(
 				"https://raw.githubusercontent.com/DottoXD/statusmonitor-server/main/package.json"
-			).catch(err => {
-				console.log(err);
-			})
-		Data.json().then((data) => {
+			)
+			.then((body) => body.json())
+			.then((data) => {
 				if (
 					data.version !== require(global.HOME + "/package.json").version
 				) {
@@ -102,7 +102,9 @@ class StatusMonitorServer {
 							)
 					);
 				}
-			})
+			}).catch((err) => {
+				console.log(err);
+			});
 	}
 
 	static LoadUptimeChecker() {
@@ -125,10 +127,6 @@ class StatusMonitorServer {
 				});
 			});
 		});
-	}
-
-	static LoadErrorHandler() {
-
 	}
 }
 
