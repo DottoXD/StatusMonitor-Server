@@ -30,13 +30,11 @@
 		"Services": [
 			{
 				"Name": "Example",
-				"Url": "",
-				"Password": ""
+				"Url": "http://localhost:3000",
 			},
 			{
 				"Name": "Example 2",
-				"Url": "",
-				"Password": ""
+				"Url": "http://localhost:3001",
 			}
 		]
 	}
