@@ -93,8 +93,7 @@ class StatusMonitorServer {
 			.then((body) => body.json())
 			.then((data) => {
 				if (
-					data.version !==
-					require(global.HOME + "/package.json").version
+					data.version !== require(global.HOME + "/package.json").version
 				) {
 					console.log(
 						chalk.bold.greenBright("[StatusMonitor] ") +
@@ -113,21 +112,18 @@ class StatusMonitorServer {
 	static LoadPlainRoutes() {
 		fastify.config.ServicesSettings.Services.forEach((service) => {
 			let FixedName = service.Name.replace(/\s+/g, "").toLowerCase();
-			fastify.get(
-				"/" + FixedName + "/metrics",
-				async (request, reply) => {
-					RedisClient.get(service.Name).then((data) => {
-						let Parse = JSON.parse(data);
-						if (Parse.Online === true) {
-							reply.send(
-								`#cpu usage\ncpu ${Parse.Cpu}\n#ram usage\nmemory_used ${Parse.Ram_Used}\n#total ram\nmemory_total ${Parse.Ram_Total}\n#used didk\ndisk_used ${Parse.Disk_Used}\n#total disk\ndisk_total ${Parse.Disk_Total}\n#total swap\nswap_total ${Parse.Swap_Total}\n#used swap\nswap_used ${Parse.Swap_Used}\n#network incoming total\nnetwork_rx ${Parse.Network_Rx}\n#outgoing data total\nnetwork_tx ${Parse.Network_Tx}\n#incoming data per second\nnetwork_rx_sec ${Parse.Network_Rx_Second}\n#outgoing data per second\nnetwork_tx_sec ${Parse.Network_Tx_Second}`
-							);
-						} else {
-							reply.send(`#server status\nstatus offline`);
-						}
-					});
-				}
-			);
+			fastify.get("/" + FixedName + "/metrics", async (request, reply) => {
+				RedisClient.get(service.Name).then((data) => {
+					let Parse = JSON.parse(data);
+					if (Parse.Online === true) {
+						reply.send(
+							`#cpu usage\ncpu ${Parse.Cpu}\n#ram usage\nmemory_used ${Parse.Ram_Used}\n#total ram\nmemory_total ${Parse.Ram_Total}\n#used didk\ndisk_used ${Parse.Disk_Used}\n#total disk\ndisk_total ${Parse.Disk_Total}\n#total swap\nswap_total ${Parse.Swap_Total}\n#used swap\nswap_used ${Parse.Swap_Used}\n#network incoming total\nnetwork_rx ${Parse.Network_Rx}\n#outgoing data total\nnetwork_tx ${Parse.Network_Tx}\n#incoming data per second\nnetwork_rx_sec ${Parse.Network_Rx_Second}\n#outgoing data per second\nnetwork_tx_sec ${Parse.Network_Tx_Second}`
+						);
+					} else {
+						reply.send(`#server status\nstatus offline`);
+					}
+				});
+			});
 		});
 	}
 }

@@ -5,9 +5,9 @@ You can use this status page to show any machine's or NodeJS process' stats (as 
 
 # update 1.0.0
 
--   first stable release
--   full project rewrite
--   custom made, high quality frontend
+-  first stable release
+-  full project rewrite
+-  custom made, high quality frontend
 
 # known issues
 

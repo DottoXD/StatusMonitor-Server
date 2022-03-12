@@ -64,8 +64,7 @@ StatusMonitor.process(async function (job, done) {
 				});
 				let RedisData = await RedisClient.get(service.Name);
 				let Parse = await JSON.parse(RedisData);
-				if (Parse.Online === false)
-					DeliverStatus(service.Name, "Online");
+				if (Parse.Online === false) DeliverStatus(service.Name, "Online");
 				return RedisClient.set(service.Name, OnlineObject);
 			})
 			.catch((error) => {

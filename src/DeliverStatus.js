@@ -2,8 +2,8 @@ let { fastify, undici } = require(global.HOME + "/index");
 
 async function DeliverStatus(Service, Status) {
 	if (
-		fastify.config.AuthenticationConfiguration
-			.EnableDiscordNotifications === false
+		fastify.config.AuthenticationConfiguration.EnableDiscordNotifications ===
+		false
 	)
 		return;
 	let RequestBody = {
