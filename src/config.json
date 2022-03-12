@@ -8,7 +8,7 @@
 		}
 	},
 	"AuthenticationConfiguration": {
-		"RedisURL": "",
+		"RedisURL": "redis://localhost:6379",
 		"EnableDiscordNotifications": false,
 		"DiscordWebhook": {
 			"Id": "",

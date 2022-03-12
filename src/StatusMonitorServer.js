@@ -102,6 +102,8 @@ class StatusMonitorServer {
 							)
 					);
 				}
+			}).catch((err) => {
+				console.log(err);
 			});
 	}
 
