@@ -1,0 +1,13 @@
+[Unit]
+Description=index.js - statusmonitor server
+Documentation=https://statusmonitor.orangybot.me
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/node /etc/statusmonitorserver/index.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

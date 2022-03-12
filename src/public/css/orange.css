@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
+
+/* StatusMonitor-Server by DottoXD - v1.0.0
+https://github.com/DottoXD/statusmonitor-server/ released under the GNU General Public License v3.0*/
+
+html {
+	list-style: none;
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0px;
+	background-color: #292930;
+}
+
+#navbar {
+	height: 40px;
+}
+
+#navbar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #f4730b;
+}
+
+#navbar ul li {
+	float: right;
+}
+
+#navbar ul li a {
+	display: block;
+	color: #ffffff;
+	font-family: "ABeeZee", sans-serif;
+	font-size: 20px;
+	overflow: hidden;
+	position: relative;
+	padding: 12px 16px;
+	text-decoration: none;
+}
+
+span {
+	position: absolute;
+	background: #ffffff;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	border-radius: 50%;
+	animation: ripples 0.6s linear infinite;
+}
+
+@keyframes ripples {
+	0% {
+		width: 0px;
+		height: 0px;
+		opacity: 0.7;
+	}
+	100% {
+		width: 400px;
+		height: 400px;
+		opacity: 0;
+	}
+}
+
+#footer h1 {
+	font-family: "ABeeZee", sans-serif;
+	font-size: 16px;
+	color: #ffffff;
+	text-align: center;
+	margin-top: 20px;
+}
+
+#container {
+	text-align: center;
+}
+
+#container button {
+	margin-top: 10px;
+	background-color: transparent;
+	border: 2px solid #f4730b;
+	border-radius: 5px;
+	width: 720px;
+	color: white;
+	height: 60px;
+	position: relative;
+	overflow: hidden;
+	font-family: "ABeeZee", sans-serif;
+	color: #ffffff;
+	transition: 0.2s;
+	font-size: 16px;
+}
+
+#container button:hover {
+	transition: 0.2s;
+	background-color: #f4730b;
+	width: 740px;
+	height: 70px;
+}
+
+#container h1 {
+	font-family: "ABeeZee", sans-serif;
+	font-size: 16px;
+	color: #ffffff;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.onlineIcon {
+	right: 10px;
+	position: absolute;
+	border-radius: 50%;
+	background-color: #f4730b;
+}
+
+.offlineIcon {
+	right: 10px;
+	position: absolute;
+	border-radius: 50%;
+	background-color: #e2252b;
+}
+
+#loader {
+	border-top: 4px solid #f4730b;
+	border-right: 4px solid transparent;
+	border-radius: 50%;
+	width: 64px;
+	height: 64px;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	position: fixed;
+	display: block;
+	animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+#stats {
+	margin-top: 20px;
+	text-align: center;
+}
+
+#stats button {
+	font-family: "ABeeZee", sans-serif;
+	background-color: transparent;
+	border: 2px solid #f4730b;
+	transition: 0.2s;
+	width: 720px;
+	height: 60px;
+	margin-top: 10px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 5px;
+	font-size: 22px;
+	color: #ffffff;
+}
+
+#stats h1 {
+	font-family: "ABeeZee", sans-serif;
+	font-size: 22px;
+	color: #ffffff;
+	margin-top: 20px;
+}
+
+#stats button:hover {
+	transition: 0.2s;
+	background-color: #f4730b;
+	width: 740px;
+	height: 70px;
+}
+
+ion-icon {
+	vertical-align: -15%;
+}
+
+@media only screen and (max-width: 740px) {
+	#container button {
+		width: 380px;
+	}
+
+	#stats button {
+		width: 380px;
+	}
+
+	#stats button:hover {
+		width: 400px;
+	}
+
+	#container button:hover {
+		width: 400px;
+	}
+
+	.companyLink {
+		display: none;
+	}
+}

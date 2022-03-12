@@ -1,0 +1,43 @@
+{
+	"WebServerConfiguration": {
+		"WebPort": 80,
+		"ProductionMode": true,
+		"RateLimit": {
+			"MaxRequests": 100,
+			"Period": "1m"
+		}
+	},
+	"AuthenticationConfiguration": {
+		"RedisURL": "",
+		"EnableDiscordNotifications": false,
+		"DiscordWebhook": {
+			"Id": "",
+			"Token": ""
+		}
+	},
+	"StatusPageConfiguration": {
+		"CompanyName": "StatusMonitor-Server",
+		"CompanyLinks": [
+			{
+				"Id": "GitHub",
+				"Url": "https://github.com/DottoXD/statusmonitor-server"
+			}
+		],
+		"CompanyColour": "orange",
+		"FetchIntervalMs": 5000
+	},
+	"ServicesSettings": {
+		"Services": [
+			{
+				"Name": "Example",
+				"Url": "",
+				"Password": ""
+			},
+			{
+				"Name": "Example 2",
+				"Url": "",
+				"Password": ""
+			}
+		]
+	}
+}

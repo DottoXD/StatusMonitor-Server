@@ -1,24 +1,38 @@
 {
-  "name": "statusmonitor-server",
-  "decription": "A free status monitor solution, used to monitor a machine's resources usage.",
-  "version": "0.0.6",
-  "scripts": {
-      "start": "node index.js"
-  },
-  "repository": {
-      "type": "git",
-      "url": "https://github.com/DottoXD/statusmonitor-server.git"
-  },
-  "author": "DottoXD",
-  "license": "MIT",
-  "bugs": {
-      "url": "https://github.com/DottoXD/statusmonitor-server/isssues"
-  },
-  "dependencies": {
-      "fastify": "^3.27.0",
-      "fastify-static": "^4.5.0",
-      "glob": "^7.2.0",
-      "moment": "^2.29.1",
-      "node-fetch": "^2.6.7"
-  }
+	"name": "statusmonitor-server",
+	"decription": "A free status monitor solution, used to monitor a machine's resources usage.",
+	"version": "1.0.0",
+	"scripts": {
+		"start": "node index",
+		"prettier": "prettier --write .",
+		"eslint": "eslint ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/DottoXD/statusmonitor-server.git"
+	},
+	"author": "DottoXD",
+	"license": "GPL-3.0-only",
+	"bugs": {
+		"url": "https://github.com/DottoXD/statusmonitor-server/isssues"
+	},
+	"dependencies": {
+		"bull": "^4.7.0",
+		"chalk": "^4.1.2",
+		"dayjs": "^1.10.8",
+		"ejs": "^3.1.6",
+		"fastify": "^3.27.2",
+		"fastify-helmet": "^7.0.1",
+		"fastify-rate-limit": "^5.7.2",
+		"fastify-static": "^4.5.0",
+		"glob": "^7.2.0",
+		"jquery": "^3.6.0",
+		"point-of-view": "5.1.0",
+		"undici": "^4.15.0"
+	},
+	"devDependencies": {
+		"eslint": "^8.10.0",
+		"eslint-config-prettier": "^8.5.0",
+		"prettier": "2.5.1"
+	}
 }
