@@ -25,9 +25,10 @@ let StatusMonitor = new queue(
 	"StatusMonitorQueue",
 	fastify.config.AuthenticationConfiguration.RedisURL
 );
-StatusMonitor.add({ data: "StatusMonitorQueue" }, { delay: 5000 });
 
-StatusMonitor.process(async function (job, done) {
+StatusMonitor.add({ data: "StatusMonitorQueue" }, { repeat: { cron: "*/10 * * * * *" }});
+
+StatusMonitor.process(async function (job) {
 	fastify.config.ServicesSettings.Services.forEach((service) => {
 		let OfflineObject = JSON.stringify({
 			Name: service.Name,
@@ -81,9 +82,4 @@ StatusMonitor.process(async function (job, done) {
 				});
 			});
 	});
-	StatusMonitor.add(
-		{ data: "StatusMonitorQueue" },
-		{ delay: fastify.config.StatusPageConfiguration.FetchIntervalMs }
-	);
-	done();
 });
