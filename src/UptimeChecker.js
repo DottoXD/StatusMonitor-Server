@@ -28,6 +28,8 @@ let StatusMonitor = new queue(
 StatusMonitor.add({ data: "StatusMonitorQueue" }, { delay: 5000 });
 
 StatusMonitor.process(async function (job, done) {
+	const FixedID = job.id - 1;
+    RedisClient.del("bull:StatusMonitorQueue:" + FixedID)
 	fastify.config.ServicesSettings.Services.forEach((service) => {
 		let OfflineObject = JSON.stringify({
 			Name: service.Name,
