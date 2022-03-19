@@ -4,7 +4,7 @@
         <% servicesStats.forEach(serviceData => { %>
             <% if(serviceData.Name === service.Name) { %>
                 <% if(serviceData.Online) { %>
-                    <button id="button" onclick="serviceStats('🟢 Online', '<%= service.Name %>', '<%= service.Url %>', '<%= serviceData.Cpu %>', '<%= serviceData.Ram_Used %>', '<%= serviceData.Ram_Total %>', '<%= serviceData.Disk_Total %>', '<%= serviceData.Disk_Used %>', '<%= serviceData.Network_Rx %>', '<%= serviceData.Network_Tx %>', '<%= serviceData.Network_Rx_Sec %>', '<%= serviceData.Network_Tx_Sec %>', '<%= serviceData.Load %>');" class="onlineButton"><ion-icon class="onlineIcon" name="checkmark-outline"></ion-icon><%= service.Name %><br>Online for <%= serviceData.Uptime %></button>
+                    <button id="button" onclick="serviceStats('🟢 Online', '<%= service.Name %>', '<%= service.Url %>', '<%= serviceData.Cpu %>', '<%= serviceData.Ram_Used %>', '<%= serviceData.Ram_Total %>', '<%= serviceData.Disk_Used %>', '<%= serviceData.Disk_Total %>', '<%= serviceData.Network_Rx %>', '<%= serviceData.Network_Tx %>', '<%= serviceData.Network_Rx_Sec %>', '<%= serviceData.Network_Tx_Sec %>', '<%= serviceData.Load %>');" class="onlineButton"><ion-icon class="onlineIcon" name="checkmark-outline"></ion-icon><%= service.Name %><br>Online for <%= serviceData.Uptime %></button>
                 <% } else { %>
                     <button id="button" onclick="serviceStats('🔴 Offline', '<%= service.Name %>', '<%= service.Url %>', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);" class="offlineButton"><ion-icon class="offlineIcon" name="close-outline"></ion-icon><%= service.Name %><br>Offline</button>
                 <% } %>
