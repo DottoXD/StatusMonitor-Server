@@ -14,7 +14,8 @@ function serviceStats(
 	serviceNetworkOut,
 	serviceNetworkInSec,
 	serviceNetworkOutSec,
-	serviceLoad
+	serviceLoad,
+	servicePing,
 ) {
 	let container = document.getElementById("container");
 	container.style.display = "none";
@@ -60,6 +61,9 @@ function serviceStats(
 
 	let serviceTextLoad = document.getElementById("load");
 	serviceTextLoad.innerText = "Load: " + serviceLoad;
+
+	let serviceTextPing = document.getElementById("ping");
+	serviceTextPing.innerText = "Ping: " + servicePing;
 
 	serviceTextUrl.onclick = function () {
 		window.location = serviceUrl;

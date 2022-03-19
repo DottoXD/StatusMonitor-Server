@@ -64,6 +64,7 @@ StatusMonitor.process(async function (job, done) {
 					Network_Tx_Second: Json.network_tx_sec,
 					Load: Json.load,
 					Type: service.Type,
+					Ping: Json.ping,
 				});
 				let RedisData = await RedisClient.get(service.Name);
 				let Parse = await JSON.parse(RedisData);

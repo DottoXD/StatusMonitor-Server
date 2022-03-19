@@ -3,12 +3,13 @@
 A free NodeJS status page solution, used to show a machine's resources usage.
 You can use this status page to show any machine's or NodeJS process' stats (as long as it's monitored with either [statusmonitor-client](https://github.com/DottoXD/statusmonitor-client) or [statusmonitor-process](https://github.com/DottoXD/statusmonitor-process)
 
-# update 1.0.2
+# update 1.0.3
 
 +  first stable release
 +  full project rewrite
 +  custom made, high quality frontend
 + (1.0.2) fixed a critical bug
++ (1.0.3) added ping support
 
 # known issues
 
