@@ -63,7 +63,7 @@ function serviceStats(
 	serviceTextLoad.innerText = "Load: " + serviceLoad;
 
 	let serviceTextPing = document.getElementById("ping");
-	serviceTextPing.innerText = "Ping: " + servicePing;
+	serviceTextPing.innerText = "Ping: " + servicePing + "ms";
 
 	serviceTextUrl.onclick = function () {
 		window.location = serviceUrl;
