@@ -1,0 +1,13 @@
+[Unit]
+Description=SMServer - Status monitoring service.
+Documentation=https://statusmonitor.github.io
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/node /etc/StatusMonitorServer/build/index.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
